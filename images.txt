@@ -7,3 +7,4 @@
 alpine:latest
 ubuntu:22.04
 ubuntu:latest
+nacos-server:v2.4.3
