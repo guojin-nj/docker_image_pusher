@@ -7,4 +7,5 @@
 #alpine:latest
 #ubuntu:22.04
 #ubuntu:latest
-nacos-server:v2.4.3
+#nacos-server:v2.4.3
+semitechnologies/transformers-inference:custom-1.13.2
