@@ -8,4 +8,5 @@
 #ubuntu:22.04
 #ubuntu:latest
 #nacos-server:v2.4.3
-semitechnologies/transformers-inference:custom-1.13.2
+#semitechnologies/transformers-inference:custom-1.13.2
+ghcr.io/huggingface/text-embeddings-inference:cpu-1.9
