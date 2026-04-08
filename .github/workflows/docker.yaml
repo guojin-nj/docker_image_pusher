@@ -60,9 +60,11 @@ jobs:
         # docker login -u $DOCKERHUB_REGISTRY_USER -p $DOCKERHUB_REGISTRY_PASSWORD $DOCKERHUB_REGISTRY
         # docker login -u $ALIYUN_REGISTRY_USER -p $ALIYUN_REGISTRY_PASSWORD $ALIYUN_REGISTRY
 
-        echo "$DOCKERHUB_REGISTRY_PASSWORD" | docker login -u "$DOCKERHUB_REGISTRY_USER" --password-stdin $DOCKERHUB_REGISTRY
-        echo "$ALIYUN_REGISTRY_PASSWORD" | docker login -u "$ALIYUN_REGISTRY_USER" --password-stdin $ALIYUN_REGISTRY
-        
+        # 登录 Docker Hub
+        echo "${DOCKERHUB_REGISTRY_PASSWORD}" | docker login --username "${DOCKERHUB_REGISTRY_USER}" --password-stdin "${DOCKERHUB_REGISTRY}"
+
+        # 登录阿里云
+        echo "${ALIYUN_REGISTRY_PASSWORD}" | docker login --username "${ALIYUN_REGISTRY_USER}" --password-stdin "${ALIYUN_REGISTRY}"
         # 数据预处理,判断镜像是否重名
         declare -A duplicate_images
         declare -A temp_map
